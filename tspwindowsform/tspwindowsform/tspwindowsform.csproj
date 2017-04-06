@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="GoogleMapsApi, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\GoogleMapsApi.dll</HintPath>
+      <HintPath>..\..\..\..\google-maps-master\GoogleMapsApi\bin\Debug\GoogleMapsApi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="Algorithm.cs" />
+    <Compile Include="GoogleMapUrlBuilder.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

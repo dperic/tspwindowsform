@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using tspwindowsform;
 
 namespace traveling_salesman_problem
 {
@@ -66,6 +68,12 @@ namespace traveling_salesman_problem
             s += DestinationList.ElementAt(0).Name;
             s += ", udaljenost = " + GetDistance()/1000 + " km"; 
             return s;
+        }
+
+        public void DisplayOnBrowser()
+        {
+            string url= GoogleMapUrlBuilder.CreateUrl(this.DestinationList);
+            Process.Start("chrome.exe", url);
         }
     }
 }
