@@ -20,8 +20,8 @@ namespace tspwindowsform
 
         private void putButton_Click(object sender, EventArgs e)
         {
-            string pocetnaAdresa = nazivUliceTextBox.Text + " " + int.Parse(kucniBrojTextBox.Text) + " " + int.Parse(postanskiBrojTextBox.Text) + " " + mjestoTextBox.Text;            
-            Address origin = new Address(pocetnaAdresa);
+                        
+            Address origin = new Address(pocetnaAdresaTextBox.Text);
             Trip.GetInstance().Initialize(origin, "addresses.txt", int.Parse(brojVozilaTextBox.Text));
 
             Algorithm alg = new Algorithm();
