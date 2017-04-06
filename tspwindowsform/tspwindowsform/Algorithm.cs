@@ -50,7 +50,13 @@ namespace traveling_salesman_problem
                 //4. ponoviti korak 1
             }
 
-            //TODO: zaustavi algoritam i "sredi poslove" (kreiraj TripPlan objekt)
+            //TODO: zaustavi algoritam i vrati vozila na pocetnu lokaciju
+            foreach(Route r in routeList)
+            {
+                r.AddDestination(trip.Origin);
+            }
+
+
             TripPlan plan = new TripPlan(routeList);
             trip.Plan = plan;
         }

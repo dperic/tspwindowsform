@@ -27,11 +27,8 @@ namespace tspwindowsform
             Algorithm alg = new Algorithm();
             alg.OrganizeTrip(Trip.GetInstance());
 
-            rutaLabel.Text = Trip.GetInstance().Plan.ToString();
-            Console.WriteLine(Trip.GetInstance().Plan.ToString());
-            Console.ReadLine();
-
-
+            Trip.GetInstance().DisplayRoutes();
         }
+
     }
 }
