@@ -37,8 +37,6 @@
             this.rutaLabel = new System.Windows.Forms.Label();
             this.brojVozilaLabel = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pocetnaAdresaTextBox
@@ -98,22 +96,12 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Maroon;
             this.imageList1.Images.SetKeyName(0, "class-diagram.jpg");
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(322, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(665, 377);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AcceptButton = this.putButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 455);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rutaLabel);
             this.Controls.Add(this.putButton);
             this.Controls.Add(this.brojVozilaLabel);
@@ -124,7 +112,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Traveling salesman";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,7 +126,6 @@
         private System.Windows.Forms.Label rutaLabel;
         private System.Windows.Forms.Label brojVozilaLabel;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
