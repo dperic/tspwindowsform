@@ -31,7 +31,7 @@ namespace tspwindowsform
         }
         private static string GetStartAddress(string startAddress)
         {
-            return "saddr=" + startAddress + "&";
+            return "saddr=" + startAddress + "&&";
         }
         private static string GetDestinationAddresses(List<string> destinations)
         {
