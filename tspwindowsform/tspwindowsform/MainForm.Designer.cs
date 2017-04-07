@@ -41,36 +41,32 @@
             // 
             // tbOriginAddress
             // 
-            this.tbOriginAddress.Location = new System.Drawing.Point(20, 31);
-            this.tbOriginAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.tbOriginAddress.Location = new System.Drawing.Point(15, 25);
             this.tbOriginAddress.Name = "tbOriginAddress";
-            this.tbOriginAddress.Size = new System.Drawing.Size(321, 22);
+            this.tbOriginAddress.Size = new System.Drawing.Size(242, 20);
             this.tbOriginAddress.TabIndex = 0;
             // 
             // tbVehicleCount
             // 
-            this.tbVehicleCount.Location = new System.Drawing.Point(20, 79);
-            this.tbVehicleCount.Margin = new System.Windows.Forms.Padding(4);
+            this.tbVehicleCount.Location = new System.Drawing.Point(15, 64);
             this.tbVehicleCount.Name = "tbVehicleCount";
-            this.tbVehicleCount.Size = new System.Drawing.Size(132, 22);
+            this.tbVehicleCount.Size = new System.Drawing.Size(100, 20);
             this.tbVehicleCount.TabIndex = 1;
             // 
             // lblOriginAddress
             // 
             this.lblOriginAddress.AutoSize = true;
-            this.lblOriginAddress.Location = new System.Drawing.Point(16, 11);
-            this.lblOriginAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOriginAddress.Location = new System.Drawing.Point(12, 9);
             this.lblOriginAddress.Name = "lblOriginAddress";
-            this.lblOriginAddress.Size = new System.Drawing.Size(121, 17);
+            this.lblOriginAddress.Size = new System.Drawing.Size(90, 13);
             this.lblOriginAddress.TabIndex = 2;
             this.lblOriginAddress.Text = "Polazišna adresa:";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(108, 111);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSubmit.Location = new System.Drawing.Point(81, 90);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(129, 28);
+            this.btnSubmit.Size = new System.Drawing.Size(97, 23);
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -79,36 +75,36 @@
             // lblVehicleCount
             // 
             this.lblVehicleCount.AutoSize = true;
-            this.lblVehicleCount.Location = new System.Drawing.Point(16, 59);
-            this.lblVehicleCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVehicleCount.Location = new System.Drawing.Point(12, 48);
             this.lblVehicleCount.Name = "lblVehicleCount";
-            this.lblVehicleCount.Size = new System.Drawing.Size(77, 17);
+            this.lblVehicleCount.Size = new System.Drawing.Size(58, 13);
             this.lblVehicleCount.TabIndex = 3;
             this.lblVehicleCount.Text = "Broj vozila:";
             // 
             // routeResultLabel
             // 
             this.routeResultLabel.AutoSize = true;
-            this.routeResultLabel.Location = new System.Drawing.Point(20, 150);
-            this.routeResultLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.routeResultLabel.Location = new System.Drawing.Point(15, 122);
             this.routeResultLabel.Name = "routeResultLabel";
-            this.routeResultLabel.Size = new System.Drawing.Size(16, 17);
+            this.routeResultLabel.Size = new System.Drawing.Size(13, 13);
             this.routeResultLabel.TabIndex = 5;
             this.routeResultLabel.Text = "  ";
             // 
             // pbMap
             // 
-            this.pbMap.Location = new System.Drawing.Point(390, 11);
+            this.pbMap.Location = new System.Drawing.Point(292, 9);
+            this.pbMap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbMap.Name = "pbMap";
-            this.pbMap.Size = new System.Drawing.Size(848, 528);
+            this.pbMap.Size = new System.Drawing.Size(700, 700);
             this.pbMap.TabIndex = 6;
             this.pbMap.TabStop = false;
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(108, 146);
+            this.btnNext.Location = new System.Drawing.Point(81, 119);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(129, 23);
+            this.btnNext.Size = new System.Drawing.Size(97, 19);
             this.btnNext.TabIndex = 7;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -118,9 +114,9 @@
             // MainForm
             // 
             this.AcceptButton = this.btnSubmit;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 560);
+            this.ClientSize = new System.Drawing.Size(999, 455);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.pbMap);
             this.Controls.Add(this.routeResultLabel);
@@ -129,7 +125,6 @@
             this.Controls.Add(this.lblOriginAddress);
             this.Controls.Add(this.tbVehicleCount);
             this.Controls.Add(this.tbOriginAddress);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Traveling salesman";

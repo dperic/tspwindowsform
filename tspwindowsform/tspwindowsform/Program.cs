@@ -15,6 +15,8 @@ namespace traveling_salesman_problem
         [STAThread]
         static void Main()
         {
+
+            clearRouteImages();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
@@ -23,9 +25,17 @@ namespace traveling_salesman_problem
             string directoryName;
         }
 
-        private void TruncateRouteImages()
+        static void clearRouteImages()
         {
-            
+            System.IO.DirectoryInfo di = new DirectoryInfo("route-images");
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete();
+            }
         }
+        
+           
+            
+        
     }
 }

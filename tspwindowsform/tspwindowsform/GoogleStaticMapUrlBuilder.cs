@@ -26,7 +26,8 @@ namespace traveling_salesman_problem
             {
                 sb.Append("|" + address);
             }
-            AppendString(sb.ToString());               
+            
+            AppendString(sb.ToString() + "&markers=" + sb.ToString());               
         }
 
         public override void AddStartAddress()
