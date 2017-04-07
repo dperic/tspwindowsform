@@ -7,50 +7,29 @@ using traveling_salesman_problem;
 
 namespace traveling_salesman_problem
 {
-    class GoogleMapUrlBuilder : IGoogleMapUrlBuilder
+    class GoogleMapUrlBuilder : AbstractMapUrlBuilder
     {
 
-        public string CreateUrl(List<Address> addresses)
+        public override void AddBaseUrl()
         {
-            List<string> addressNames = ConvertAddressList(addresses);
-           
-            string startAddress = addressNames.ElementAt(0);
-            List<string> restAddresses = addressNames.GetRange(1, (addressNames.Count-1));
-
-            StringBuilder builder = new StringBuilder();
-            builder.Append(GetBaseUrl());
-            builder.Append(GetStartAddress(startAddress));
-            builder.Append(GetDestinationAddresses(restAddresses));
-
-            return builder.ToString();
+            AppendString("http://maps.google.hr/maps?");
         }
-
-        private string GetBaseUrl()
+        public override void AddStartAddress()
         {
-            return "http://maps.google.hr/maps?";
+            string startAddress = this.addressNames.ElementAt(0);
+            AppendString("saddr=" + startAddress + "&&");
         }
-        private string GetStartAddress(string startAddress)
+        public override void AddDestinationAddresses()
         {
-            return "saddr=" + startAddress + "&&";
-        }
-        private string GetDestinationAddresses(List<string> destinations)
-        {
+            List<string> destinations = addressNames.GetRange(1, (addressNames.Count - 1));
             StringBuilder sb = new StringBuilder();
             sb.Append("daddr=" + destinations.ElementAt(0));
             for (int i = 1; i < destinations.Count; i++)
             {
                 sb.Append("+to:" + destinations.ElementAt(i));
             }
-            return sb.ToString();
+            AppendString(sb.ToString());
         }
-        private List<string> ConvertAddressList(List<Address> addressList)
-        {
-            List<string> addressNames = new List<string>();
-            foreach (Address a in addressList)
-            {
-                addressNames.Add(a.Name.Replace(" ", "+"));
-            }
-            return addressNames;
-        }
+        
     }
 }

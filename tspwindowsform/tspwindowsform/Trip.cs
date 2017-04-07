@@ -33,13 +33,11 @@ namespace traveling_salesman_problem
             SetAddressDistances();
             this.VehicleCount = vehicleCount;
         }
-        public void DisplayRoutes()
+        public void Display()
         {
-            foreach(Route r in Plan.RouteList)
-            {
-                r.DisplayOnBrowser();
-            }
+            Plan.DisplayOnBrowser();
         }
+
 
         private void LoadAddresses(string path)
         {

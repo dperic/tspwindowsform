@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace traveling_salesman_problem
 {
-    class Route : HasDistance
+    class Route : IDirection
     {
+        private string saveDirectory = AppConfiguration.GetRouteImageDirectory();
         public List<Address> DestinationList { get; }
         public Address LastDestination
         {
@@ -71,9 +74,20 @@ namespace traveling_salesman_problem
 
         public void DisplayOnBrowser()
         {
-            IGoogleMapUrlBuilder urlBuilder = new GoogleMapUrlBuilder();
-            string url= urlBuilder.CreateUrl(this.DestinationList);
+
+            //AbstractMapUrlBuilder urlBuilder = new GoogleMapUrlBuilder();
+            string url = UrlDirector.CreateUrl(this.DestinationList, new GoogleStaticMapUrlBuilder());
             Process.Start("chrome.exe", url);
+        }
+
+        public void SaveImage()
+        {
+            WebClient client = new WebClient();
+            string url = UrlDirector.CreateUrl(this.DestinationList, new GoogleStaticMapUrlBuilder());
+
+
+            int fileCount = Directory.GetFiles(saveDirectory).Count();
+            client.DownloadFile(url, saveDirectory+"/route-" + fileCount + ".png");
         }
     }
 }

@@ -13,6 +13,7 @@ namespace traveling_salesman_problem
 {
     public partial class MainForm : Form
     {
+        private ImageIterator iterator;
         public MainForm()
         {
             InitializeComponent();
@@ -27,8 +28,20 @@ namespace traveling_salesman_problem
             Algorithm alg = new Algorithm();
             alg.OrganizeTrip(Trip.GetInstance());
             routeResultLabel.Text = Trip.GetInstance().Plan.ToString();
-            Trip.GetInstance().DisplayRoutes();
+            //Trip.GetInstance().DisplayRoutes();
+
+            //spremi slike ruta lokalno
+            Trip.GetInstance().Plan.SaveImage();
+
+            //ispisi rute u picture boxu
+            iterator = new ImageIterator();
+            pbMap.Image = iterator.First();
+            btnNext.Visible = true;
         }
 
+        private void btnNext_onClick(object sender, EventArgs e)
+        {
+            pbMap.Image = iterator.Next();
+        }
     }
 }

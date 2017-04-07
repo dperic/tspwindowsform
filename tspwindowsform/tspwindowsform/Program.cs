@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,14 @@ namespace traveling_salesman_problem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+
+            //truncate foldera sa imagima
+            string directoryName;
+        }
+
+        private void TruncateRouteImages()
+        {
+            
         }
     }
 }

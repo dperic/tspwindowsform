@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace traveling_salesman_problem
 {
-    class TripPlan : HasDistance
+    class TripPlan : IDirection
     {
         public List<Route> RouteList { get;  }
 
@@ -42,6 +42,22 @@ namespace traveling_salesman_problem
             }
             s += "\n\nUkupna prijeđena udaljenost: " + GetDistance()/1000 + " km";
             return s;
+        }
+
+        public void DisplayOnBrowser()
+        {
+            foreach (Route r in RouteList)
+            {
+                r.DisplayOnBrowser();
+            }
+        }
+
+        public void SaveImage()
+        {
+            foreach(Route r in RouteList)
+            {
+                r.SaveImage();
+            }
         }
     }
 }

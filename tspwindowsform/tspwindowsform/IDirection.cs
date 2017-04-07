@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace traveling_salesman_problem
 {
-    interface HasDistance
+    interface IDirection
     {
         float GetDistance();
+        void DisplayOnBrowser();
+        void SaveImage();
     }
 }
