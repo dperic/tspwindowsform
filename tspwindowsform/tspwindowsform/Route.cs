@@ -71,7 +71,8 @@ namespace traveling_salesman_problem
 
         public void DisplayOnBrowser()
         {
-            string url= GoogleMapUrlBuilder.CreateUrl(this.DestinationList);
+            IGoogleMapUrlBuilder urlBuilder = new GoogleMapUrlBuilder();
+            string url= urlBuilder.CreateUrl(this.DestinationList);
             Process.Start("chrome.exe", url);
         }
     }
