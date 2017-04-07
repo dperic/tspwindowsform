@@ -7,7 +7,7 @@
     <ProjectGuid>{7FC08A42-264F-4A21-BF2D-3ACA32913DF3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>tspwindowsform</RootNamespace>
+    <RootNamespace>traveling_salesman_problem</RootNamespace>
     <AssemblyName>tspwindowsform</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -53,6 +53,7 @@
     <Compile Include="Address.cs" />
     <Compile Include="Algorithm.cs" />
     <Compile Include="GoogleMapUrlBuilder.cs" />
+    <Compile Include="IGoogleMapUrlBuilder.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

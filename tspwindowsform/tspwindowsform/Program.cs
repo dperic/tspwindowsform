@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tspwindowsform
+namespace traveling_salesman_problem
 {
     static class Program
     {

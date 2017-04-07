@@ -11,9 +11,7 @@ namespace traveling_salesman_problem
 {
     class GoogleDirectionApiClient
     {
-        private static string apiKey = "AIzaSyCmjTMe0lOytvpcSYLkwdRi4fpQvdanG9o";
-        private string api = "https://maps.googleapis.com/maps/api/directions/json";
-        private string options = "?origin=Split&destination=Zagreb&key=AIzaSyBQB_fNYxPbyWHYNHpooPzllIqmOPJzVWc";
+        private static string apiKey = "AIzaSyBfcPg5wfaIhcpOdIKJSL0Qg1K-qih6i1E";
         
         public static int RequestDistance(string origin, string destination) 
         {

@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using traveling_salesman_problem;
 
-namespace tspwindowsform
+namespace traveling_salesman_problem
 {
-    class GoogleMapUrlBuilder
+    class GoogleMapUrlBuilder : IGoogleMapUrlBuilder
     {
 
-        public static string CreateUrl(List<Address> addresses)
+        public string CreateUrl(List<Address> addresses)
         {
             List<string> addressNames = ConvertAddressList(addresses);
            
@@ -25,15 +25,15 @@ namespace tspwindowsform
             return builder.ToString();
         }
 
-        private static string GetBaseUrl()
+        private string GetBaseUrl()
         {
             return "http://maps.google.hr/maps?";
         }
-        private static string GetStartAddress(string startAddress)
+        private string GetStartAddress(string startAddress)
         {
             return "saddr=" + startAddress + "&&";
         }
-        private static string GetDestinationAddresses(List<string> destinations)
+        private string GetDestinationAddresses(List<string> destinations)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("daddr=" + destinations.ElementAt(0));
@@ -43,7 +43,7 @@ namespace tspwindowsform
             }
             return sb.ToString();
         }
-        private static List<string> ConvertAddressList(List<Address> addressList)
+        private List<string> ConvertAddressList(List<Address> addressList)
         {
             List<string> addressNames = new List<string>();
             foreach (Address a in addressList)

@@ -1,4 +1,4 @@
-﻿namespace tspwindowsform
+﻿namespace traveling_salesman_problem
 {
     partial class MainForm
     {
@@ -28,84 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pocetnaAdresaTextBox = new System.Windows.Forms.TextBox();
-            this.brojVozilaTextBox = new System.Windows.Forms.TextBox();
-            this.pocetnaAdresaLabel = new System.Windows.Forms.Label();
-            this.putButton = new System.Windows.Forms.Button();
-            this.rutaLabel = new System.Windows.Forms.Label();
-            this.brojVozilaLabel = new System.Windows.Forms.Label();
+            this.tbOriginAddress = new System.Windows.Forms.TextBox();
+            this.tbVehicleCount = new System.Windows.Forms.TextBox();
+            this.lblOriginAddress = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblVehicleCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // pocetnaAdresaTextBox
+            // tbOriginAddress
             // 
-            this.pocetnaAdresaTextBox.Location = new System.Drawing.Point(20, 31);
-            this.pocetnaAdresaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pocetnaAdresaTextBox.Name = "pocetnaAdresaTextBox";
-            this.pocetnaAdresaTextBox.Size = new System.Drawing.Size(321, 22);
-            this.pocetnaAdresaTextBox.TabIndex = 0;
+            this.tbOriginAddress.Location = new System.Drawing.Point(20, 31);
+            this.tbOriginAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.tbOriginAddress.Name = "tbOriginAddress";
+            this.tbOriginAddress.Size = new System.Drawing.Size(321, 22);
+            this.tbOriginAddress.TabIndex = 0;
             // 
-            // brojVozilaTextBox
+            // tbVehicleCount
             // 
-            this.brojVozilaTextBox.Location = new System.Drawing.Point(20, 79);
-            this.brojVozilaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.brojVozilaTextBox.Name = "brojVozilaTextBox";
-            this.brojVozilaTextBox.Size = new System.Drawing.Size(132, 22);
-            this.brojVozilaTextBox.TabIndex = 1;
+            this.tbVehicleCount.Location = new System.Drawing.Point(20, 79);
+            this.tbVehicleCount.Margin = new System.Windows.Forms.Padding(4);
+            this.tbVehicleCount.Name = "tbVehicleCount";
+            this.tbVehicleCount.Size = new System.Drawing.Size(132, 22);
+            this.tbVehicleCount.TabIndex = 1;
             // 
-            // pocetnaAdresaLabel
+            // lblOriginAddress
             // 
-            this.pocetnaAdresaLabel.AutoSize = true;
-            this.pocetnaAdresaLabel.Location = new System.Drawing.Point(16, 11);
-            this.pocetnaAdresaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.pocetnaAdresaLabel.Name = "pocetnaAdresaLabel";
-            this.pocetnaAdresaLabel.Size = new System.Drawing.Size(121, 17);
-            this.pocetnaAdresaLabel.TabIndex = 2;
-            this.pocetnaAdresaLabel.Text = "Polazišna adresa:";
+            this.lblOriginAddress.AutoSize = true;
+            this.lblOriginAddress.Location = new System.Drawing.Point(16, 11);
+            this.lblOriginAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOriginAddress.Name = "lblOriginAddress";
+            this.lblOriginAddress.Size = new System.Drawing.Size(121, 17);
+            this.lblOriginAddress.TabIndex = 2;
+            this.lblOriginAddress.Text = "Polazišna adresa:";
             // 
-            // putButton
+            // btnSubmit
             // 
-            this.putButton.Location = new System.Drawing.Point(108, 111);
-            this.putButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.putButton.Name = "putButton";
-            this.putButton.Size = new System.Drawing.Size(129, 28);
-            this.putButton.TabIndex = 4;
-            this.putButton.Text = "Pronađi put";
-            this.putButton.UseVisualStyleBackColor = true;
-            this.putButton.Click += new System.EventHandler(this.putButton_Click);
+            this.btnSubmit.Location = new System.Drawing.Point(108, 111);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(129, 28);
+            this.btnSubmit.TabIndex = 4;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_onClick);
             // 
-            // rutaLabel
+            // lblVehicleCount
             // 
-            this.rutaLabel.AutoSize = true;
-            this.rutaLabel.Location = new System.Drawing.Point(16, 160);
-            this.rutaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.rutaLabel.Name = "rutaLabel";
-            this.rutaLabel.Size = new System.Drawing.Size(16, 17);
-            this.rutaLabel.TabIndex = 5;
-            this.rutaLabel.Text = "  ";
-            // 
-            // brojVozilaLabel
-            // 
-            this.brojVozilaLabel.AutoSize = true;
-            this.brojVozilaLabel.Location = new System.Drawing.Point(16, 59);
-            this.brojVozilaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.brojVozilaLabel.Name = "brojVozilaLabel";
-            this.brojVozilaLabel.Size = new System.Drawing.Size(77, 17);
-            this.brojVozilaLabel.TabIndex = 3;
-            this.brojVozilaLabel.Text = "Broj vozila:";
+            this.lblVehicleCount.AutoSize = true;
+            this.lblVehicleCount.Location = new System.Drawing.Point(16, 59);
+            this.lblVehicleCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVehicleCount.Name = "lblVehicleCount";
+            this.lblVehicleCount.Size = new System.Drawing.Size(77, 17);
+            this.lblVehicleCount.TabIndex = 3;
+            this.lblVehicleCount.Text = "Broj vozila:";
             // 
             // MainForm
             // 
-            this.AcceptButton = this.putButton;
+            this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1332, 560);
-            this.Controls.Add(this.rutaLabel);
-            this.Controls.Add(this.putButton);
-            this.Controls.Add(this.brojVozilaLabel);
-            this.Controls.Add(this.pocetnaAdresaLabel);
-            this.Controls.Add(this.brojVozilaTextBox);
-            this.Controls.Add(this.pocetnaAdresaTextBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.lblVehicleCount);
+            this.Controls.Add(this.lblOriginAddress);
+            this.Controls.Add(this.tbVehicleCount);
+            this.Controls.Add(this.tbOriginAddress);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Traveling salesman";
@@ -117,12 +105,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox pocetnaAdresaTextBox;
-        private System.Windows.Forms.TextBox brojVozilaTextBox;
-        private System.Windows.Forms.Label pocetnaAdresaLabel;
-        private System.Windows.Forms.Button putButton;
-        private System.Windows.Forms.Label rutaLabel;
-        private System.Windows.Forms.Label brojVozilaLabel;
+        private System.Windows.Forms.TextBox tbOriginAddress;
+        private System.Windows.Forms.TextBox tbVehicleCount;
+        private System.Windows.Forms.Label lblOriginAddress;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lblVehicleCount;
     }
 }
 
