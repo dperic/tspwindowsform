@@ -83,9 +83,9 @@
             this.routeResultLabel.AutoSize = true;
             this.routeResultLabel.Location = new System.Drawing.Point(15, 122);
             this.routeResultLabel.Name = "routeResultLabel";
-            this.routeResultLabel.Size = new System.Drawing.Size(61, 13);
+            this.routeResultLabel.Size = new System.Drawing.Size(13, 13);
             this.routeResultLabel.TabIndex = 5;
-            this.routeResultLabel.Text = "routeResult";
+            this.routeResultLabel.Text = "  ";
             // 
             // MainForm
             // 
