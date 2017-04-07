@@ -64,8 +64,8 @@ namespace traveling_salesman_problem
                     s = s +  a.Name + " ->\n ";
                 
             }
-            s += DestinationList.ElementAt(0).Name;
-            s += ", udaljenost = " + GetDistance()/1000 + " km"; 
+            
+            s += "Udaljenost = " + GetDistance()/1000 + " km"; 
             return s;
         }
 

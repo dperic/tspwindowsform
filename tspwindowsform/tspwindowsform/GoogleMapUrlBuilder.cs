@@ -48,7 +48,7 @@ namespace traveling_salesman_problem
             List<string> addressNames = new List<string>();
             foreach (Address a in addressList)
             {
-                addressNames.Add(a.Name);
+                addressNames.Add(a.Name.Replace(" ", "+"));
             }
             return addressNames;
         }

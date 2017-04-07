@@ -26,7 +26,7 @@ namespace traveling_salesman_problem
 
             Algorithm alg = new Algorithm();
             alg.OrganizeTrip(Trip.GetInstance());
-
+            routeResultLabel.Text = Trip.GetInstance().Plan.ToString();
             Trip.GetInstance().DisplayRoutes();
         }
 
